@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auralog | Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:opsz@20..40&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="example.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="auralogo.png" class="nav-logo" alt="Auralog logo" />
+      <span class="nav-brand">Auralog</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="about.html">About</a>
+      <a href="login.html">Login</a>
+    </div>
+  </nav>
+
+  <main class="dashboard-page">
+    <section class="dashboard-hero glass-panel">
+      <div class="hero-copy">
+        <p class="eyebrow">Your Dashboard</p>
+        <h1>Hello, Friend. What’s the vibe today?</h1>
+        <p class="hero-text">
+          Your music, your moods, your little emotional plot twists — all in one place.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#" class="primary-btn">New Entry</a>
+          <a href="#" class="secondary-btn">Record Audio Journal</a>
+        </div>
+      </div>
+
+      <div class="hero-now-playing glass-subpanel">
+        <p class="mini-label">Latest soundtrack</p>
+        <div class="track-card">
+          <img src="icon-playlist.svg" alt="playlist cover" class="track-cover" />
+          <div>
+            <h3>Soft Landing Energy</h3>
+            <p>Built from your latest entry • 18 songs</p>
+          </div>
+        </div>
+
+        <div class="track-tags">
+          <span>Anxious</span>
+          <span>Hopeful</span>
+          <span>Processing</span>
+        </div>
+
+        <button class="play-btn">▶ Play Soundtrack</button>
+      </div>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="panel mood-panel glass-panel">
+        <div class="panel-header">
+          <h2>Quick Check-In</h2>
+          <p>Pick what fits. You can choose more than one.</p>
+        </div>
+
+        <div class="mood-tags">
+          <button class="tag purple">Anxious</button>
+          <button class="tag green">Hyped Up</button>
+          <button class="tag red">Heartbroken</button>
+          <button class="tag blue">Chill</button>
+          <button class="tag orange">Excited</button>
+          <button class="tag pink">Lovey Dovey</button>
+          <button class="tag yellow">Tired</button>
+          <button class="tag lavender">Nostalgic</button>
+        </div>
+
+        <div class="intensity-row">
+          <label for="intensity">Intensity</label>
+          <input type="range" id="intensity" min="1" max="10" value="6" />
+        </div>
+
+        <textarea placeholder="Add a note if you want..."></textarea>
+
+        <div class="panel-actions">
+          <button class="primary-btn small-btn">Save Check-In</button>
+        </div>
+      </article>
+
+      <article class="panel insights-panel glass-panel">
+        <div class="panel-header">
+          <h2>Your Emotional Patterns</h2>
+          <p>A few things your music has been trying to tell you.</p>
+        </div>
+
+        <div class="insight-list">
+          <div class="insight-item">
+            <span class="insight-icon">📈</span>
+            <div>
+              <h3>You’ve been leaning nostalgic at night.</h3>
+              <p>Your most reflective entries have been happening after 9 PM.</p>
+            </div>
+          </div>
+
+          <div class="insight-item">
+            <span class="insight-icon">🎵</span>
+            <div>
+              <h3>Comfort songs are showing up a lot this week.</h3>
+              <p>You’ve replayed familiar tracks more than new discoveries lately.</p>
+            </div>
+          </div>
+
+          <div class="insight-item">
+            <span class="insight-icon">✨</span>
+            <div>
+              <h3>Your mood has been slowly trending upward.</h3>
+              <p>Your playlists have shifted from heavy processing to softer recovery.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel journal-panel glass-panel">
+        <div class="panel-header">
+          <h2>Recent Entries</h2>
+          <p>Your last few check-ins, journals, and emotional snapshots.</p>
+        </div>
+
+        <div class="entry-list">
+          <div class="entry-card glass-subpanel">
+            <div class="entry-top">
+              <div>
+                <h3>Trying Not to Spiral</h3>
+                <p>Written Entry • Today</p>
+              </div>
+              <span class="entry-badge">Anxious + Hopeful</span>
+            </div>
+            <p class="entry-preview">
+              I’m overwhelmed, but not in a hopeless way. It feels more like my brain has
+              47 tabs open and one of them is playing music too loud...
+            </p>
+          </div>
+
+          <div class="entry-card glass-subpanel">
+            <div class="entry-top">
+              <div>
+                <h3>Late Night Processing</h3>
+                <p>Audio Journal • Yesterday</p>
+              </div>
+              <span class="entry-badge">Nostalgic</span>
+            </div>
+            <p class="entry-preview">
+              Voice note saved. AI picked up themes of grief, reflection, and comfort.
+            </p>
+          </div>
+
+          <div class="entry-card glass-subpanel">
+            <div class="entry-top">
+              <div>
+                <h3>Main Character Delusion, But Make It Healing</h3>
+                <p>Quick Check-In • 2 days ago</p>
+              </div>
+              <span class="entry-badge">Hyped Up + Emotional</span>
+            </div>
+            <p class="entry-preview">
+              Mood tags logged with a high intensity score. Playlist mode selected: counter the mood.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel soundtrack-panel glass-panel">
+        <div class="panel-header">
+          <h2>Year in Soundtrack</h2>
+          <p>Your emotional wrap-up is already taking shape.</p>
+        </div>
+
+        <div class="year-card">
+          <div class="year-circle">
+            <span>68%</span>
+            <small>of the year logged</small>
+          </div>
+
+          <div class="year-copy">
+            <h3>You’re building a really soft, reflective year.</h3>
+            <p>
+              So far, your 2026 soundtrack is leaning nostalgic, healing, romantic, and a
+              little bit dramatic. As it should.
+            </p>
+            <a href="#" class="secondary-btn small-btn">Preview My Year</a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

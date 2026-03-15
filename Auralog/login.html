@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auralog | Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:opsz@20..40&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="auralogo.png" class="nav-logo" alt="Auralog logo" />
+      <span class="nav-brand">Auralog</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <main class="auth-page">
+    <section class="auth-shell">
+      <div class="auth-left">
+        <div class="auth-copy glass-panel">
+          <img src="auralogo.png" alt="Auralog logo" class="hero-logo" />
+          <h1>Your soundtrack starts here.</h1>
+          <p>
+            Log your moods, track your listening, and discover the patterns
+            hidden inside your favorite songs.
+          </p>
+
+          <ul class="benefits">
+            <li>Track your music and mood together</li>
+            <li>Build a soundtrack of your life</li>
+            <li>Spot emotional trends over time</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="auth-right">
+        <div class="auth-card glass-panel">
+          <div class="tab-switcher">
+            <button class="tab-button active" id="loginTab" type="button">Log In</button>
+            <button class="tab-button" id="signupTab" type="button">Sign Up</button>
+          </div>
+
+          <div class="auth-header">
+            <h2 id="formTitle">Welcome back</h2>
+            <p id="formSubtitle">Log in to continue your soundtrack journey.</p>
+          </div>
+
+          <button class="google-btn" type="button">
+            <span class="google-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path fill="#EA4335" d="M24 9.5c3.54 0 6.73 1.22 9.25 3.6l6.9-6.9C35.96 2.36 30.41 0 24 0 14.62 0 6.51 5.38 2.56 13.22l8.03 6.23C12.5 13.62 17.76 9.5 24 9.5z"/>
+                <path fill="#4285F4" d="M46.98 24.55c0-1.57-.14-3.09-.4-4.55H24v8.62h12.94c-.56 3-2.25 5.54-4.8 7.24l7.36 5.7c4.3-3.96 6.78-9.8 6.78-17.01z"/>
+                <path fill="#FBBC05" d="M10.59 28.09A14.5 14.5 0 0 1 9.5 24c0-1.42.24-2.8.67-4.09l-8.03-6.23A23.98 23.98 0 0 0 0 24c0 3.87.93 7.53 2.56 10.78l8.03-6.69z"/>
+                <path fill="#34A853" d="M24 48c6.48 0 11.92-2.13 15.89-5.81l-7.36-5.7c-2.05 1.38-4.67 2.2-8.53 2.2-6.24 0-11.5-4.12-13.41-9.95l-8.03 6.19C6.51 42.62 14.62 48 24 48z"/>
+              </svg>
+            </span>
+            Continue with Google
+          </button>
+
+          <div class="divider">
+            <span>or</span>
+          </div>
+
+          <form class="auth-form" id="authForm">
+            <div class="input-group" id="nameGroup" style="display: none;">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Enter your name" />
+            </div>
+
+            <div class="input-group">
+              <label for="phoneNumber">Phone Number</label>
+              <input
+                type="tel"
+                id="phoneNumber"
+                name="phoneNumber"
+                placeholder="(555) 123-4567"
+                autocomplete="tel"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              />
+            </div>
+
+            <div class="input-group" id="confirmPasswordGroup" style="display: none;">
+              <label for="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Re-enter your password"
+                autocomplete="new-password"
+              />
+            </div>
+
+            <div class="form-row" id="loginExtras">
+              <label class="checkbox-row">
+                <input type="checkbox" />
+                <span>Remember me</span>
+              </label>
+              <a href="#" class="text-link">Forgot password?</a>
+            </div>
+
+            <div class="form-row" id="signupExtras" style="display: none;">
+              <label class="checkbox-row agree-row">
+                <input type="checkbox" required />
+                <span>I agree to the Terms and Privacy Policy</span>
+              </label>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitButton">Log In</button>
+          </form>
+
+          <p class="bottom-text" id="bottomText">
+            Don’t have an account?
+            <button class="inline-switch" id="bottomSwitchToSignup" type="button">Sign up</button>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const loginTab = document.getElementById("loginTab");
+    const signupTab = document.getElementById("signupTab");
+    const formTitle = document.getElementById("formTitle");
+    const formSubtitle = document.getElementById("formSubtitle");
+    const submitButton = document.getElementById("submitButton");
+    const bottomText = document.getElementById("bottomText");
+    const bottomSwitchToSignup = document.getElementById("bottomSwitchToSignup");
+    const authForm = document.getElementById("authForm");
+
+    const nameGroup = document.getElementById("nameGroup");
+    const confirmPasswordGroup = document.getElementById("confirmPasswordGroup");
+    const loginExtras = document.getElementById("loginExtras");
+    const signupExtras = document.getElementById("signupExtras");
+
+    let mode = "login";
+
+    function setMode(newMode) {
+      mode = newMode;
+
+      if (mode === "login") {
+        loginTab.classList.add("active");
+        signupTab.classList.remove("active");
+
+        formTitle.textContent = "Welcome back";
+        formSubtitle.textContent = "Log in to continue your soundtrack journey.";
+        submitButton.textContent = "Log In";
+
+        nameGroup.style.display = "none";
+        confirmPasswordGroup.style.display = "none";
+        loginExtras.style.display = "flex";
+        signupExtras.style.display = "none";
+
+        bottomText.innerHTML = `Don’t have an account?
+          <button class="inline-switch" id="bottomSwitchToSignup" type="button">Sign up</button>`;
+
+        document.getElementById("bottomSwitchToSignup").addEventListener("click", () => setMode("signup"));
+      } else {
+        loginTab.classList.remove("active");
+        signupTab.classList.add("active");
+
+        formTitle.textContent = "Create your account";
+        formSubtitle.textContent = "Start tracking the soundtrack of your life.";
+        submitButton.textContent = "Sign Up";
+
+        nameGroup.style.display = "block";
+        confirmPasswordGroup.style.display = "block";
+        loginExtras.style.display = "none";
+        signupExtras.style.display = "block";
+
+        bottomText.innerHTML = `Already have an account?
+          <button class="inline-switch" id="bottomSwitchToLogin" type="button">Log in</button>`;
+
+        document.getElementById("bottomSwitchToLogin").addEventListener("click", () => setMode("login"));
+      }
+    }
+
+    loginTab.addEventListener("click", () => setMode("login"));
+    signupTab.addEventListener("click", () => setMode("signup"));
+    bottomSwitchToSignup.addEventListener("click", () => setMode("signup"));
+
+    authForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const phone = document.getElementById("phoneNumber").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (!phone || !password) {
+        alert("Please enter your phone number and password.");
+        return;
+      }
+
+      if (mode === "signup") {
+        const fullName = document.getElementById("fullName").value.trim();
+        const confirmPassword = document.getElementById("confirmPassword").value.trim();
+
+        if (!fullName) {
+          alert("Please enter your full name.");
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          alert("Your passwords do not match.");
+          return;
+        }
+      }
+
+      alert(mode === "login"
+        ? "Login submitted. Connect this form to your backend or auth provider next."
+        : "Sign-up submitted. Connect this form to your backend or auth provider next.");
+    });
+  </script>
+</body>
+</html>
